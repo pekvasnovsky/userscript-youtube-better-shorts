@@ -1,96 +1,139 @@
-# 更好的 Youtube Shorts
+# Better YouTube Shorts
 
-## 為 youtube shorts 提供了更多功能，包括
+## Added more features to YouTube shorts, including:
 
-- 可自動跳轉到對應video界面
-- 可手動跳轉到對應video界面，快捷鍵 alt + w ，如[https://www.youtube.com/shorts/9wRiG-A7K8A](https://www.youtube.com/shorts/9wRiG-A7K8A)，按下 alt + w 后可打開[https://www.youtube.com/watch?v=9wRiG-A7K8A](https://www.youtube.com/watch?v=9wRiG-A7K8A)，在影片界面打開當前shorts
-- 進度條（含時間顯示，可以拖動）
-- 音量控制（含音量顯示）
-- 播放速度控制
-- 自動滾動控制
+- Automatic jump to the corresponding video screen
 
-### 腳本推薦：[Tabview Youtube](https://greasyfork.org/zh-CN/scripts/428651-tabview-youtube)，最大的優點是能一邊看影片一邊看評論而不用來回的上下滾動，非常好用
+- Manual jump to the corresponding video screen using the shortcut Alt + W, for example, [https://www.youtube.com/shorts/9wRiG-A7K8A](https://www.youtube.com/shorts/9wRiG-A7K8A), pressing Alt + W will open [https://www.youtube.com/watch?v=9wRiG-A7K8A](https://www.youtube.com/watch?v=9wRiG-A7K8A), opening the current short in the video screen
 
-## 腳本特點
+- Progress bar (including time display, draggable)
 
-- <h3>沒有 setInterval 造成的性能問題，使用requestAnimationFrame，並且只渲染需要的部分，大大減少了性能消耗</h3>
+- Volume control (including volume display)
 
-## 最佳化點
+- Playback speed control
 
-- <h3>解決在有廣告攔截插件及擴展的情況下該插件失效的問題</h3>
-- <h3>最佳化載入速度</h3>
-- <h3>解決從其他頁面（如用戶首頁，首頁的shorts欄等）進入的shorts不載入Better Youtube Shorts界面的問題</h3>
+- Auto-scroll control
 
-## 腳本選項（在Tampermonkey / ViolentMonkey菜單中）
+### Script Recommendation: [Tabview](https://www.youtube.com/shorts/9wRiG-A7K8A) [YouTube](https://greasyfork.org/zh-CN/scripts/428651-tabview-youtube), its biggest advantage is that you can watch videos and read comments simultaneously without scrolling back and forth, which is very convenient.
 
-### 1. 選項 "Shorts Auto Switch To Video"
+## Script Features
 
-- off: 不自動切換到影片界面
-- on: 自動切換到影片界面
+- <h3>Avoids performance issues caused by setInterval, uses requestAnimationFrame, and only renders the necessary parts, greatly reducing performance consumption</h3>
 
-### 2. 選項 "Loop Playback" （該選項在關閉autoscroll後才有效果，否則優先自動滾動）
+## Optimizations
 
-- off: 播放完一個影片後停止
-- on: 影片播放完會自動無限循環
+- <h3>Solves the problem of ad-blocking plugins and extensions failing when they are present</h3>
 
-### 3. 選項 "Continue From Last Checkpoint"
+- <h3>Optimizes loading speed</h3>
 
-- off: shorts的默認邏輯，每個shorts從0s開始播放
-- temporary: 記憶每個shorts最後的位置，再一次回到這個shorts時從上一次離開的位置繼續（每一次網頁刷新，這些記憶被都會重設）
-- permanent：網頁刷新不會再重設這些記憶
+- <h3>Solves the problem of shorter links not loading into the Better YouTube Shorts interface when accessed from other pages (such as the user's homepage, the shorts section of the homepage, etc.)</h3>
 
-### 4. 選項 "Constant Volume"
+## Script Options (in the Tampermonkey / ViolentMonkey menu)
 
-- off: 使用youtube對shorts使用的默認音量邏輯，每個影片都有自己的音量
-- on: 所有瀏覽的shorts都採用用戶在音量條上設置的音量
+### 1. Option "Shorts Auto Switch To Video"
 
-### 5. 選項 "Constant Speed"
+- off: Do not automatically switch to the video interface
 
-- off: 使用youtube對shorts使用的默認播放速度邏輯，每個影片都有自己的播放速度
-- on: 所有瀏覽的shorts都採用用戶在播放速度條上設置的播放速度
+- on: Automatically switch to the video interface
 
-### 6. 選項 "Open Watch In Current Tab"（該選項在ShortsAutoSwitchToVideo為off，即停留在shorts界面時才有效）
+### 2. Option "Loop Playback" (This option only takes effect after autoscroll is turned off; otherwise, autoscroll takes precedence)
 
-- off: 在新標籤頁打開當前shorts對應的watch界面
-- on: 在當前標籤頁打開shorts對應的watch界面
+- off: Stops playback after a video finishes.
 
-### 7. 選項 "Double Click To Fullscreen"
+- on: Automatically loops indefinitely after a video finishes playing.
 
-- off: 關閉雙擊全螢幕（以便相容其他插件在shorts上的雙擊操作）
-- on: 打開雙擊全螢幕
+### 3. Option "Continue From Last Checkpoint"
 
-### 8. 選項 "Progress Bar Style"
+- off: Default logic for shorts; each short starts playing from 0 seconds.
 
-- original: 使用youtube原生的進度條
-- custom: 使用Better Youtube Shorts自定義的進度條
+- temporary: Remembers the last position of each short; when returning to the same short, it continues from the last position (this memory is reset every time the page refreshes).
 
-### 9. 選項 "Operation Mode"
+- permanent: This memory is not reset when the page refreshes.
 
-- Video (Yotube影片採用的快捷鍵，加上shift控制滾動影片)
-  - 上/下箭頭 - 音量減小/增大
-  - 左/右箭頭 - 後退/前進
-  - Shift+左/Shift+右 - 上一個/下一個影片
-  - Shift+上/Shift+下 - 上一個/下一個影片
-  - 空格 - 播放/暫停
-  - 雙擊影片 - 全螢幕
-  - alt + 回車(包括數字鍵盤的回車) - 全螢幕
-  - alt + w - 打開shorts對應的影片界面
-  - 0~9(包括數字鍵盤) - 跳轉到對應的進度
-  - C - 加快播放速度
-  - X - 減慢播放速度
-  - Z - 恢復播放速度
-  - V - 顯示/隱藏shorts介紹
-- Shorts (Youtube Shorts採用的快捷鍵，加上shift控制音量)
-  - 上/下箭頭 - 上一個/下一個影片
-  - 左/右箭頭 - 後退/前進
-  - Shift+左/Shift+右 - 音量減小/增大
-  - Shift+下/Shift+上 - 音量減小/增大
-  - 空格 - 播放/暫停
-  - 雙擊影片 - 全螢幕
-  - alt + 回車(包括數字鍵盤的回車) - 全螢幕
-  - alt + w - 打開shorts對應的影片界面
-  - 0~9(包括數字鍵盤) - 跳轉到對應的進度
-  - C - 加快播放速度
-  - X - 減慢播放速度
-  - Z - 恢復播放速度
-  - V - 顯示/隱藏shorts介紹
+### 4. Option "Constant Volume"
+
+- off: Uses YouTube's default volume logic for shorts; each video has its own volume.
+
+- on: All viewed shorts use the volume set by the user on the volume bar.
+
+### 5. Option "Constant Speed"
+
+- off: Using YouTube's default playback speed logic for shorts, each video has its own playback speed.
+
+- on: All viewed shorts use the playback speed set by the user on the playback speed bar.
+
+### 6. Option "Open Watch In Current Tab" (This option is only effective when ShortsAutoSwitchToVideo is off, i.e., when the user is on the shorts screen)
+
+- off: Opens the watch window for the current short in a new tab.
+
+- on: Opens the watch window for the current short in the current tab.
+
+### 7. Option "Double Click To Fullscreen"
+
+- off: Disables double-click to fullscreen (to ensure compatibility with other plugins' double-click operations on shorts).
+
+- on: Enables double-click to fullscreen.
+
+### 8. Option "Progress Bar Style"
+
+- original: Uses YouTube's native progress bar.
+
+- custom: Uses a custom progress bar from Better YouTube Shorts.
+
+### 9. Option "Operation Mode"
+
+- Video (Keyboard shortcuts used in YouTube videos, plus Shift to scroll)
+
+- Up/Down Arrow - Volume down/up
+
+- Left/Right Arrow - Back/Forward
+
+- Shift + Left/Shift + Right - Previous/Next Video
+
+- Shift + Up/Shift + Down - Previous/Next Video
+
+- Space - Play/Pause
+
+- Double-tap Video - Full Screen
+
+- Alt + Enter (including Enter on the numeric keypad) - Full Screen
+
+- Alt + W - Open the short's video view
+
+- 0~9 (including the numeric keypad) - Jump to the corresponding progress
+
+- C - Speed ​​up playback
+
+- X - Slow down playback
+
+- Z - Restore playback speed
+
+- V - Show/hide short's description
+
+- Shorts (Keyboard shortcuts used in YouTube Shorts, plus Shift to control volume)
+
+- Up/Down Arrow - Previous/Next Video
+
+- Left/Right Arrow - Back/Forward
+
+- Shift + Left/Shift + Right - Volume down/up
+
+- Shift+Down/Shift+Up - Volume down/up
+
+- Space - Play/Pause
+
+- Double-click the video - Full screen
+
+- Alt + Enter (including Enter on the numeric keypad) - Full screen
+
+- Alt + W - Open the video interface corresponding to the short
+
+- 0~9 (including the numeric keypad) - Jump to the corresponding progress
+
+- C - Speed ​​up playback
+
+- X - Slow down playback
+
+- Z - Restore playback speed
+
+- V - Show/hide the short description

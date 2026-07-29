@@ -2,12 +2,12 @@
 // @name               Better Youtube Shorts
 // @name:zh-CN         更好的 Youtube Shorts
 // @name:zh-TW         更好的 Youtube Shorts
-// @namespace          Violentmonkey Scripts
-// @version            2.4.4
+// @namespace          https://github.com/pekvasnovsky/userscript-youtube-better-shorts
+// @version            1.0.0
 // @description        Provide more control functions for YouTube Shorts, including automatic/manual redirection to corresponding video pages, volume control, playback speed control, progress bar, auto scrolling, shortcut keys, and more.
 // @description:zh-CN  为 Youtube Shorts提供更多的控制功能，包括自动/手动跳转到对应视频页面，音量控制，播放速度控制，进度条，自动滚动，快捷键等等。
 // @description:zh-TW  為 Youtube Shorts提供更多的控制功能，包括自動/手動跳轉到對應影片頁面，音量控制，播放速度控制，進度條，自動滾動，快捷鍵等等。
-// @author             Meriel
+// @author             pekvasnovsky
 // @match              *://*.youtube.com/*
 // @exclude            *://music.youtube.com/*
 // @run-at             document-start
@@ -18,8 +18,8 @@
 // @grant              GM_info
 // @license            MIT
 // @icon               https://www.google.com/s2/favicons?sz=64&domain=youtube.com
-// @homepageURL        https://github.com/MerielVaren/better-youtube-shorts
-// @supportURL         https://github.com/MerielVaren/better-youtube-shorts/issues
+// @homepageURL        https://github.com/pekvasnovsky/userscript-youtube-better-shorts
+// @supportURL         https://github.com/pekvasnovsky/userscript-youtube-better-shorts/issues
 // ==/UserScript==
 
 (async () => {

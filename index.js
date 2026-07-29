@@ -926,7 +926,7 @@
         video.playbackRate = await GM.getValue("playbackRate", 1);
       }
 
-      const reel = document.querySelector("ytd-reel-video-renderer[is-active]");
+      const reel = document.querySelector("ytd-reel-video-renderer");
       if (reel === null) {
         return;
       }
@@ -981,7 +981,7 @@
       }
 
       const metaDescription = document.querySelector(
-        "ytd-reel-video-renderer[is-active] .metadata-container"
+        "ytd-reel-video-renderer .metadata-container"
       );
       if (metaDescription) {
         metaDescription.style.visibility = hideMetaDescription

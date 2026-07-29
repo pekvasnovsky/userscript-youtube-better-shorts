@@ -84,56 +84,56 @@
 
 - Video (Keyboard shortcuts used in YouTube videos, plus Shift to scroll)
 
-- Up/Down Arrow - Volume down/up
+  - Up/Down Arrow - Volume down/up
 
-- Left/Right Arrow - Back/Forward
+  - Left/Right Arrow - Back/Forward
 
-- Shift + Left/Shift + Right - Previous/Next Video
+  - Shift + Left/Shift + Right - Previous/Next Video
 
-- Shift + Up/Shift + Down - Previous/Next Video
+  - Shift + Up/Shift + Down - Previous/Next Video
 
-- Space - Play/Pause
+  - Space - Play/Pause
 
-- Double-tap Video - Full Screen
+  - Double-tap Video - Full Screen
 
-- Alt + Enter (including Enter on the numeric keypad) - Full Screen
+  - Alt + Enter (including Enter on the numeric keypad) - Full Screen
 
-- Alt + W - Open the short's video view
+  - Alt + W - Open the short's video view
 
-- 0~9 (including the numeric keypad) - Jump to the corresponding progress
+  - 0~9 (including the numeric keypad) - Jump to the corresponding progress
 
-- C - Speed ​​up playback
+  - C - Speed ​​up playback
 
-- X - Slow down playback
+  - X - Slow down playback
 
-- Z - Restore playback speed
+  - Z - Restore playback speed
 
-- V - Show/hide short's description
+  - V - Show/hide short's description
 
 - Shorts (Keyboard shortcuts used in YouTube Shorts, plus Shift to control volume)
 
-- Up/Down Arrow - Previous/Next Video
+  - Up/Down Arrow - Previous/Next Video
 
-- Left/Right Arrow - Back/Forward
+  - Left/Right Arrow - Back/Forward
 
-- Shift + Left/Shift + Right - Volume down/up
+  - Shift + Left/Shift + Right - Volume down/up
 
-- Shift+Down/Shift+Up - Volume down/up
+  - Shift+Down/Shift+Up - Volume down/up
 
-- Space - Play/Pause
+  - Space - Play/Pause
 
-- Double-click the video - Full screen
+  - Double-click the video - Full screen
 
-- Alt + Enter (including Enter on the numeric keypad) - Full screen
+  - Alt + Enter (including Enter on the numeric keypad) - Full screen
 
-- Alt + W - Open the video interface corresponding to the short
+  - Alt + W - Open the video interface corresponding to the short
 
-- 0~9 (including the numeric keypad) - Jump to the corresponding progress
+  - 0~9 (including the numeric keypad) - Jump to the corresponding progress
 
-- C - Speed ​​up playback
+  - C - Speed ​​up playback
 
-- X - Slow down playback
+  - X - Slow down playback
 
-- Z - Restore playback speed
+  - Z - Restore playback speed
 
-- V - Show/hide the short description
+  - V - Show/hide the short description
